@@ -1,5 +1,8 @@
 import signal
 from threading import Event, Thread
+import multiprocessing
+
+multiprocessing.set_start_method('spawn', force=True)
 
 from chonkie import MarkdownChef
 from django.core.management.base import BaseCommand
